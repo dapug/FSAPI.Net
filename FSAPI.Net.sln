@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95B1CE28-002E-4235-8069-9D6DE3E95BFB}"
 	ProjectSection(SolutionItems) = preProject
 		FSAPI.Net.vsmdi = FSAPI.Net.vsmdi
+		License.htm = License.htm
 		Local.testsettings = Local.testsettings
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
