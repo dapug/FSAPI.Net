@@ -33,7 +33,6 @@ namespace FSAPI.Identity
         public bool Login(string username, string password, string devKey)
         {
             return false;
-
         }
 
         public void LoginAsync(string username, string password, string devKey)
