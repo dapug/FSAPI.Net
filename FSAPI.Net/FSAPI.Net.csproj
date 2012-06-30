@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\External\Json.Net\Bin\Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,12 +44,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncCompletedFullEventArgs.cs" />
-    <Compile Include="Identity\Basic.cs" />
-    <Compile Include="Identity\BasicAuthArgs.cs" />
+    <Compile Include="DataFormat.cs" />
+    <Compile Include="FSServer.cs" />
+    <Compile Include="FSUri.cs" />
+    <Compile Include="Identity\AccessTokenInfo.cs" />
+    <Compile Include="Identity\AuthInfo.cs" />
+    <Compile Include="Identity\BasicAuth.cs" />
+    <Compile Include="Identity\BasicAuthEventArgs.cs" />
+    <Compile Include="Identity\OAuth2AuthorizationEventArgs.cs" />
+    <Compile Include="Identity\OAuth2AccessTokenEventArgs.cs" />
     <Compile Include="Model\FamilySearch.cs" />
     <Compile Include="Model\Identity.Designer.cs" />
     <Compile Include="Identity\OAuth2.cs" />
+    <Compile Include="Net\SuperWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseInfo.cs" />
+    <Compile Include="ServiceBase.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="XmlSerlializeHelper.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

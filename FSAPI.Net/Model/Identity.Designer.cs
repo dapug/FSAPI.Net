@@ -6,7 +6,7 @@ using FSAPI.Model;
 using System;
 using System.Runtime.Serialization;
 
-namespace FSAPI.Identity.V1.Schema
+namespace FSAPI.Identity.V2.Schema
 {
 
     /// <remarks>
@@ -16,8 +16,8 @@ namespace FSAPI.Identity.V1.Schema
     ///  
     /// </summary>
     
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://api.familysearch.org/identity/v1", TypeName = "identity")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://api.familysearch.org/identity/v1", ElementName = "identity")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://api.familysearch.org/identity/v2", TypeName = "identity")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://api.familysearch.org/identity/v2", ElementName = "identity")]
     public partial class Identity : FamilySearchElement
     {
 
@@ -26,7 +26,7 @@ namespace FSAPI.Identity.V1.Schema
         ///  The session associated with the identity.
         /// </summary>
         
-        [System.Xml.Serialization.XmlElementAttribute(ElementName = "session", Namespace = "http://api.familysearch.org/identity/v1")]
+        [System.Xml.Serialization.XmlElementAttribute(ElementName = "session", Namespace = "http://api.familysearch.org/identity/v2")]
         public Session Session
         {
             get
@@ -40,7 +40,7 @@ namespace FSAPI.Identity.V1.Schema
         }
     }
 }
-namespace FSAPI.Identity.V1.Schema
+namespace FSAPI.Identity.V2.Schema
 {
 
     /// <remarks>
@@ -50,7 +50,7 @@ namespace FSAPI.Identity.V1.Schema
     ///  A identity session.
     /// </summary>
     
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://api.familysearch.org/identity/v1", TypeName = "session")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://api.familysearch.org/identity/v2", TypeName = "session")]
     public partial class Session
     {
 
