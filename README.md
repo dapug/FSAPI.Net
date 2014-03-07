@@ -5,9 +5,9 @@ FSAPI.Net
 
 
 Completed:<br>
-OAuth2 Authentication
-Basic Authentication
+OAuth2 Authentication<br>
+Basic Authentication<br>
 
 
-TODO:
-Everything else
+TODO:<br>
+Everything else<br>
