@@ -4,7 +4,7 @@ FSAPI.Net
 .NET API Library for the FamilySearch Platform
 
 
-Completed:
+Completed:<br>
 OAuth2 Authentication
 Basic Authentication
 
