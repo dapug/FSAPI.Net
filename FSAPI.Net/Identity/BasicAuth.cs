@@ -128,18 +128,18 @@ namespace FSAPI.Identity
         /// </summary>
         /// <param name="username">Username</param>
         /// <param name="password">Password</param>
-        /// <param name="devKey">Dev Key (or Client ID)</param>
+        /// <param name="appKey">App Key (or Client ID)</param>
         /// <returns></returns>
-        public BasicAuthEventArgs Login(string username, string password, string devKey)
+        public BasicAuthEventArgs Login(string username, string password, string appKey)
         {
-            bool valid = ValidateLogin(username, password, devKey);
+            bool valid = ValidateLogin(username, password, appKey);
 
             BasicAuthEventArgs ir = null;
 
             if (valid)
             {
                 //Attempt Login to the system, get the response
-                ir = AuthRequest(username, password, devKey, false);
+                ir = AuthRequest(username, password, appKey, false);
 
                 if (ir != null && ir.Result != null && ir.Result.Session != null)
                 {
@@ -155,16 +155,16 @@ namespace FSAPI.Identity
         /// </summary>
         /// <param name="username">Username</param>
         /// <param name="password">Password</param>
-        /// <param name="devKey">Dev Key (or Client ID)</param>
-        public void LoginAsync(string username, string password, string devKey)
+        /// <param name="appKey">App Key (or Client ID)</param>
+        public void LoginAsync(string username, string password, string appKey)
         {
-            bool valid = ValidateLogin(username, password, devKey);
+            bool valid = ValidateLogin(username, password, appKey);
 
 
             if (valid)
             {
                 //Attempt Login to the system, get the response using Async, wherein the remaining steps of login are done by the DownloadStringCompleted handler
-                AuthRequest(username, password, devKey, true);
+                AuthRequest(username, password, appKey, true);
             }
         }
 

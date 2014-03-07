@@ -15,7 +15,7 @@ namespace FSAPI.Test
     public class OAuth2Test
     {
         AutoResetEvent _TestTrigger;
-        string devKey = "";
+        string appKey = "";   //////////   FamilySearch App Key here /////////////////
         string userAgent = "myTest/v1";
         FSServer server = FSServer.Sandbox;
 
@@ -76,8 +76,8 @@ namespace FSAPI.Test
         public void GetAuthUrlTest()
         {
             OAuth2 target = new OAuth2(userAgent, server);
-            string clientID = devKey; // Dev Key
-            string redirectUrl = "http://www.wittsell.com/default.asp"; // TODO: Initialize to an appropriate value
+            string clientID = appKey; // App Key
+            string redirectUrl = ""; // TODO: Initialize to an appropriate value
             string userState = string.Empty; // TODO: Initialize to an appropriate value
             string language = string.Empty; // TODO: Initialize to an appropriate value
             string expected = string.Empty; // TODO: Initialize to an appropriate value
@@ -94,7 +94,7 @@ namespace FSAPI.Test
         public void GetAccessTokenTest()
         {
             OAuth2 target = new OAuth2(userAgent, server);
-            string clientID = devKey; // Dev Key
+            string clientID = appKey; // Dev Key
             string authCode = "88-36-13-9982-57-78-1373-105-119-121-56-153915-9656-73102-32-47-91-104-11890-118-37-1811281-123";
             OAuth2AccessTokenEventArgs expected = null; // TODO: Initialize to an appropriate value
             OAuth2AccessTokenEventArgs actual;
@@ -112,7 +112,7 @@ namespace FSAPI.Test
             this._TestTrigger = new AutoResetEvent(false);
 
             OAuth2 target = new OAuth2(userAgent, server);
-            string clientID = devKey; // Dev Key
+            string clientID = appKey; // Dev Key
             string authCode = string.Empty; // TODO: Initialize to an appropriate value
             target.GetAccessTokenCompleted += new OAuth2.GetAccessTokenCompletedEventHandler(target_GetAccessTokenCompleted);
             target.GetAccessTokenAsync(clientID, authCode);

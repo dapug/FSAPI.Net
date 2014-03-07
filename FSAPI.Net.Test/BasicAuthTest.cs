@@ -14,7 +14,7 @@ namespace FSAPI.Test
     public class BasicAuthTest
     {
         AutoResetEvent _TestTrigger;
-        string devKey = "";
+        string appKey = "";  //////////   FamilySearch App Key here /////////////////
         string userAgent = "myTest/v1";
         FSServer server = FSServer.Partner;
 
@@ -78,7 +78,7 @@ namespace FSAPI.Test
             string password = ""; 
             BasicAuthEventArgs expected = null; // TODO: Initialize to an appropriate value
             BasicAuthEventArgs actual;
-            actual = target.Login(username, password, devKey);
+            actual = target.Login(username, password, appKey);
             Assert.IsNotNull(actual);
             Assert.IsNotNull(actual.Result);
             Assert.IsNotNull(actual.Result.Session);
@@ -101,7 +101,7 @@ namespace FSAPI.Test
             string username = "";
             string password = "";
             target.LoginCompleted += new BasicAuth.LoginCompletedHandler(target_LoginCompleted);
-            target.LoginAsync(username, password, devKey);
+            target.LoginAsync(username, password, appKey);
 
             this._TestTrigger.WaitOne();
         }
